@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import { HogLog } from '../../interfaces/HogLog'
+import { Record } from '../../interfaces/Record'
 
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
@@ -15,12 +15,12 @@ import { map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  hoglogCollection: AngularFirestoreCollection<HogLog>;
-  hoglogs: Observable<HogLog[]>;
+  recordsCollection: AngularFirestoreCollection<Record>;
+  records: Observable<Record[]>;
   constructor(private firestore: AngularFirestore) {}
     ngOnInit() {
-      this.hoglogCollection = this.firestore.collection('HogLogs');
-      this.hoglogs = this.hoglogCollection.valueChanges();
+      this.recordsCollection = this.firestore.collection('records');
+      this.records = this.recordsCollection.valueChanges();
     }
 
 }

@@ -6,6 +6,9 @@ import { FirebaseConfig } from '../modules/firebaseconfig';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+import {MilesPipe} from './helpers/Miles.pipe';
+import {RoundPipe} from './helpers/Round.pipe';
+
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
     DashboardComponent,
     MyNavComponent,
     HomeComponent,
+    MilesPipe,
+    RoundPipe,
     RecordsComponent
   ],
   imports: [
