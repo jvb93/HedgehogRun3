@@ -1,9 +1,0 @@
-<mat-list>
-  <mat-list-item *ngFor="let hoglog of records | async">
-    <strong matLine>{{ hoglog.EndDate * 1000 | date}}</strong>
-    <p matLine>
-      {{hoglog.TotalTicks | miles | round}} Miles
-    </p>
-  </mat-list-item>
-</mat-list>
-
