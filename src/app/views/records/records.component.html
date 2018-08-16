@@ -17,7 +17,7 @@
                     <tbody>
                         <tr *ngFor="let record of topTenLongestNights | async">
                             <td>{{record.StartDate | date:false}}</td>
-                            <td>{{record.TotalTicks | miles | round }}</td>
+                            <td>{{record.TotalTicks | miles | round:2 }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -41,7 +41,7 @@
                             <tbody>
                                 <tr *ngFor="let record of topTenFastestIntervals | async">
                                     <td>{{record.FastestInterval | date:true}}</td>
-                                    <td>{{record.MaxTicks | mph | round  }}</td>
+                                    <td>{{record.MaxTicks | mph | round:2  }}</td>
                                 </tr>
                             </tbody>
                         </table>

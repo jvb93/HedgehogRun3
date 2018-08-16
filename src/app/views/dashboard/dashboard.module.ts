@@ -6,11 +6,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { MilesPipe } from '../../../pipes/miles.pipe';
-import { RoundPipe } from '../../../pipes/round.pipe';
-import { MphPipe } from '../../../pipes/mph.pipe';
-import { DateParse } from '../../../pipes/dateparse.pipe';
 import { CommonModule } from '@angular/common';
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
 @NgModule({
   imports: [
@@ -19,13 +16,11 @@ import { CommonModule } from '@angular/common';
     DashboardRoutingModule,
     ChartsModule,
     BsDropdownModule,
+    RoundProgressModule,
     ButtonsModule.forRoot()
   ],
   declarations: [ 
     DashboardComponent,
-    MilesPipe, 
-    RoundPipe, 
-    MphPipe, 
-    DateParse ]
+  ]
 })
 export class DashboardModule { }

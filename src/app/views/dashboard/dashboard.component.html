@@ -1,16 +1,30 @@
 <div class="animated fadeIn">
-    <div class="row" *ngIf="latest">
-        <div class="col">
-            {{latest.temperature_f | round}}
-            Current Temperature
+    <div class="row" *ngIf="latest && fastest">
+        <div class="col text-center">
+            <div class="d-flex align-items-center justify-content-center w-100 h-100">
+                <div>
+                    <h1>
+                        {{latest.temperature_f}}
+                    </h1>
+                    <span>Current Temperature</span>
+                </div>
+            </div>
         </div>
         <div class="col">
-                {{latest.ticks | mph | round}}
-                Current Speed
+            <div>{{latest.ticks}}</div>
+            <round-progress rounded="true" responsive="true" [current]="latest.ticks" [max]="fastest.ticks">
+          
+            </round-progress>
         </div>
-        <div class="col">
-                {{latest.humidity | round}}
-                Current Humidity
+        <div class="col text-center">
+            <div class="d-flex align-items-center justify-content-center w-100 h-100">
+                <div>
+                    <h1>
+                        {{latest.humidity}}
+                    </h1>
+                    <span>Current Humidity</span>
+                </div>
+            </div>
         </div>
     </div>
     

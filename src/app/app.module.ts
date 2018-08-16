@@ -67,6 +67,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     P500Component,
     LoginComponent,
     RegisterComponent,
+    
   ],
   providers: [{
     provide: LocationStrategy,
