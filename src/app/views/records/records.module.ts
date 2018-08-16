@@ -6,15 +6,19 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { RecordsComponent } from './records.component';
 import { RecordsRoutingModule } from './records-routing.module';
+import { CommonModule } from '@angular/common';
+import { MilesPipe } from '../../../pipes/miles.pipe';
+import { RoundPipe } from '../../../pipes/round.pipe';
+import { MphPipe } from '../../../pipes/mph.pipe';
+import { DateParse } from '../../../pipes/dateparse.pipe';
+
 
 @NgModule({
   imports: [
+    CommonModule,
     FormsModule,
     RecordsRoutingModule,
-    ChartsModule,
-    BsDropdownModule,
-    ButtonsModule.forRoot()
   ],
-  declarations: [ RecordsComponent ]
+  declarations: [ RecordsComponent, MilesPipe, RoundPipe, MphPipe, DateParse]
 })
 export class RecordsModule { }

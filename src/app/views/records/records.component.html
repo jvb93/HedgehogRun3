@@ -1,3 +1,51 @@
 <div class="animated fadeIn">
- 
+ <div class="row">
+     <div class="col-md-6">
+        <h1>Top Ten Longest Nights</h1>
+         <div class="card">
+            <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Night Beginning
+                            </th>
+                            <th>
+                                Total Miles
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let record of topTenLongestNights | async">
+                            <td>{{record.StartDate | date:false}}</td>
+                            <td>{{record.TotalTicks | miles | round }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+         </div>
+        
+     </div>
+     <div class="col-md-6">
+         <h1>Top Ten Fastest Intervals</h1>
+            <div class="card">
+                    <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Interval
+                                    </th>
+                                    <th>
+                                        MPH
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let record of topTenFastestIntervals | async">
+                                    <td>{{record.FastestInterval | date:true}}</td>
+                                    <td>{{record.MaxTicks | mph | round  }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                 </div>
+     </div>
+ </div>
 </div>
