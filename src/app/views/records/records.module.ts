@@ -19,6 +19,11 @@ import { DateParse } from '../../../pipes/dateparse.pipe';
     FormsModule,
     RecordsRoutingModule,
   ],
-  declarations: [ RecordsComponent, MilesPipe, RoundPipe, MphPipe, DateParse]
+  declarations: [ 
+    RecordsComponent,
+    MilesPipe, 
+    RoundPipe, 
+    MphPipe, 
+    DateParse]
 })
 export class RecordsModule { }

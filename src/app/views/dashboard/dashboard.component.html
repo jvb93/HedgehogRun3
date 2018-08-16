@@ -1,3 +1,17 @@
 <div class="animated fadeIn">
- 
+    <div class="row" *ngIf="latest">
+        <div class="col">
+            {{latest.temperature_f | round}}
+            Current Temperature
+        </div>
+        <div class="col">
+                {{latest.ticks | mph | round}}
+                Current Speed
+        </div>
+        <div class="col">
+                {{latest.humidity | round}}
+                Current Humidity
+        </div>
+    </div>
+    
 </div>
