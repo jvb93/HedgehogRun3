@@ -9,6 +9,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { config } from '../../app.config'
 import 'rxjs/add/operator/take';
 import * as moment from 'moment'
+import { ITest } from '../../models/ITest';
 @Component({
   templateUrl: 'dashboard.component.html'
 })
@@ -17,6 +18,8 @@ export class DashboardComponent implements OnInit {
   hoglogs : Observable<IHogLog[]>
   latest: IHogLog
   fastest: IHogLog
+  test: ITest
+  testObservable: Observable<ITest>
 
   ngOnInit(): void {
     // generate random values for mainChart
@@ -35,7 +38,10 @@ export class DashboardComponent implements OnInit {
 
     db.collection<IHogLog>(config.hoglog_endpoint, q=> q.where('ticks', '>', -1).orderBy('ticks', 'desc')).valueChanges().take(1).subscribe(log=> this.fastest = log[0]);
 
-  
+
+    db.collection<ITest>('test', q=> q.orderBy('time', 'desc').limit(1)).valueChanges().subscribe(log=>{this.test = log[0]; console.log(log[0])});
+
+    
   }
 
 }
