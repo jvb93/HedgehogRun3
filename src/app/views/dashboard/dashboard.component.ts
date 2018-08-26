@@ -29,7 +29,6 @@ export class DashboardComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    // generate random values for mainChart
    
   }
 

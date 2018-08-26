@@ -1,6 +1,6 @@
 <div class="animated fadeIn">
     <div class="row" *ngIf="latest && fastest">
-        <div class="col text-center">
+        <div class="col-md-4 order-md-1 order-2 col-6 text-center">
             <div class="d-flex align-items-center justify-content-center w-100 h-100">
                
                 <div>
@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-4 order-md-2 order-1 col-12">
             <div class="progress-wrapper">
                 <div class="current">
                     <span>
@@ -21,11 +21,8 @@
                 </div>
                 <round-progress rounded="true" responsive="true" [current]="latest.ticks" [max]="fastest.ticks"></round-progress>
             </div>
-        
-          
-
         </div>
-        <div class="col text-center">
+        <div class="col-md-4 order-3 col-6 text-center">
             <div class="d-flex align-items-center justify-content-center w-100 h-100">
                 <div>
                     <h1>
@@ -36,8 +33,8 @@
             </div>
         </div>
     </div>
-    <div class="row" *ngIf="pastTwelveHours">
-        <div class="col">
+    <div class="row mt-5" *ngIf="pastTwelveHours">
+        <div class="col-md-6 col-sm-12">
             <h2>Temperature, Past 12 Hours</h2>
                 <highcharts-chart
                 [Highcharts]="Highcharts"
@@ -46,7 +43,7 @@
                 style="width: 100%; height: 400px; display: block;"
               ></highcharts-chart>
         </div>
-        <div class="col">
+        <div class="col-md-6 col-sm-12">
                 <h2>Humidity, Past 12 Hours</h2>
                 <highcharts-chart
                 [Highcharts]="Highcharts"
