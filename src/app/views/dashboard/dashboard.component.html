@@ -2,6 +2,7 @@
     <div class="row" *ngIf="latest && fastest">
         <div class="col text-center">
             <div class="d-flex align-items-center justify-content-center w-100 h-100">
+               
                 <div>
                     <h1>
                         {{latest.temperature_f | round}}&deg;F
@@ -15,6 +16,7 @@
                 <div class="current">
                     <span>
                         <h1>{{ latest.ticks | mph | round }} MPH</h1>  
+                        <span>Current Speed</span>
                     </span>
                 </div>
                 <round-progress rounded="true" responsive="true" [current]="latest.ticks" [max]="fastest.ticks"></round-progress>
