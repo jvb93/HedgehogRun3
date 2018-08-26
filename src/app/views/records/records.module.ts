@@ -7,10 +7,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { RecordsComponent } from './records.component';
 import { RecordsRoutingModule } from './records-routing.module';
 import { CommonModule } from '@angular/common';
-import { MilesPipe } from '../../../pipes/miles.pipe';
-import { RoundPipe } from '../../../pipes/round.pipe';
-import { MphPipe } from '../../../pipes/mph.pipe';
-import { DateParse } from '../../../pipes/dateparse.pipe';
+import { SharedModule } from '../../shared.module';
+
 
 
 @NgModule({
@@ -18,12 +16,9 @@ import { DateParse } from '../../../pipes/dateparse.pipe';
     CommonModule,
     FormsModule,
     RecordsRoutingModule,
+    SharedModule
   ],
   declarations: [ 
-    RecordsComponent,
-    MilesPipe, 
-    RoundPipe, 
-    MphPipe, 
-    DateParse]
+    RecordsComponent]
 })
 export class RecordsModule { }

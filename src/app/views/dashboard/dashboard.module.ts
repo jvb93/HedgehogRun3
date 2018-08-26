@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CommonModule } from '@angular/common';
 import {RoundProgressModule} from 'angular-svg-round-progressbar';
+import { SharedModule } from '../../shared.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import {RoundProgressModule} from 'angular-svg-round-progressbar';
     ChartsModule,
     BsDropdownModule,
     RoundProgressModule,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    SharedModule
   ],
   declarations: [ 
     DashboardComponent,
