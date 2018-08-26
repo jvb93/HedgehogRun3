@@ -18,4 +18,5 @@ import * as functions from 'firebase-functions';
             response.status(200).send("Ok")
         });
     }
+    response.send("ok")
  })

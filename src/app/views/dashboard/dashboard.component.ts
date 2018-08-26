@@ -29,17 +29,10 @@ export class DashboardComponent implements OnInit {
 
 
   constructor(db: AngularFirestore){
-    this.hoglogs = db.collection<IHogLog>(config.hoglog_endpoint, q=>q.where("timestamp", '>', moment.utc().subtract(12, 'hours').toDate()).orderBy('timestamp','desc')).valueChanges();
-
-    this.hoglogs.take(1).subscribe(log => {
-      this.latest = log[0]
-      console.log(log[0])
-    })
-
-    db.collection<IHogLog>(config.hoglog_endpoint, q=> q.where('ticks', '>', -1).orderBy('ticks', 'desc')).valueChanges().take(1).subscribe(log=> this.fastest = log[0]);
+    
 
 
-    db.collection<ITest>('test', q=> q.orderBy('time', 'desc').limit(1)).valueChanges().subscribe(log=>{this.test = log[0]; console.log(log[0])});
+    db.collection<IHogLog>(config.hoglog_endpoint, q=> q.orderBy('timestamp', 'desc').limit(1)).valueChanges().subscribe(log=>{this.latest = log[0]; console.log(log[0])});
 
     
   }

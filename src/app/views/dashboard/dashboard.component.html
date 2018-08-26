@@ -1,7 +1,6 @@
 <div class="animated fadeIn">
-    <div class="row" *ngIf="latest && fastest">
+    <div class="row" *ngIf="latest">
         <div class="col text-center">
-            <h1>{{test.value | async}}</h1>
             <div class="d-flex align-items-center justify-content-center w-100 h-100">
                 <div>
                     <h1>
@@ -13,9 +12,7 @@
         </div>
         <div class="col">
             <div>{{latest.ticks}}</div>
-            <round-progress rounded="true" responsive="true" [current]="latest.ticks" [max]="fastest.ticks">
           
-            </round-progress>
         </div>
         <div class="col text-center">
             <div class="d-flex align-items-center justify-content-center w-100 h-100">

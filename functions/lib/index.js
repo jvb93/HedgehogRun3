@@ -17,5 +17,6 @@ exports.hoglog = functions.https.onRequest((request, response) => {
             response.status(200).send("Ok");
         });
     }
+    response.send("ok");
 });
 //# sourceMappingURL=index.js.map
