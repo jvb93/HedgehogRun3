@@ -4,7 +4,7 @@
             <div class="d-flex align-items-center justify-content-center w-100 h-100">
                
                 <div>
-                    <h1>
+                    <h1 class="display-4">
                         {{latest.temperature_f | round}}&deg;F
                     </h1>
                     <span>Current Temperature</span>
@@ -14,18 +14,18 @@
         <div class="col-md-4 order-md-2 order-1 col-12">
             <div class="progress-wrapper">
                 <div class="current">
-                    <span>
-                        <h1>{{ latest.ticks | mph | round }} MPH</h1>  
+                    <span class="text-center">
+                        <h1 class="display-4">{{ latest.ticks | mph | round }} MPH</h1>  
                         <span>Current Speed</span>
                     </span>
                 </div>
-                <round-progress rounded="true" responsive="true" [current]="latest.ticks" [max]="fastest.ticks"></round-progress>
+                <round-progress rounded="true" responsive="true" [current]="latest.ticks" [color]="'#aeff18'" [background]="'rgba(255,255,255,.1)'" [max]="fastest.ticks"></round-progress>
             </div>
         </div>
         <div class="col-md-4 order-3 col-6 text-center">
             <div class="d-flex align-items-center justify-content-center w-100 h-100">
                 <div>
-                    <h1>
+                    <h1 class="display-4">
                         {{latest.humidity | round}}%
                     </h1>
                     <span>Current Humidity</span>

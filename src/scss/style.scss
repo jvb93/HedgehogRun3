@@ -6,3 +6,23 @@
 
 // If you want to add something do it here
 @import "custom";
+
+body{
+    background-color: $gray-900;
+    color: $white;
+}
+
+.breadcrumb, .app-header{
+    border-bottom: 1px solid #23282c;
+}
+.sidebar{
+    border-right: 1px solid #23282c;
+}
+.sidebar .nav-link:hover{
+    color: #23282c;
+}
+
+.sidebar .nav-link:hover .nav-icon{
+    color: #23282c;
+
+}
