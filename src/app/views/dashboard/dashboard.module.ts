@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import {RoundProgressModule} from 'angular-svg-round-progressbar';
 import { SharedModule } from '../../shared.module';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { MphPipe } from '../../../pipes/mph.pipe';
+import { MilesPipe } from '../../../pipes/miles.pipe';
 
 
 @NgModule({
@@ -26,6 +28,10 @@ import { HighchartsChartModule } from 'highcharts-angular';
   ],
   declarations: [ 
     DashboardComponent,
-  ]
+  ],
+  providers: [ 
+    MphPipe, 
+    MilesPipe
+   ]
 })
 export class DashboardModule { }

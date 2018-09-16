@@ -26,3 +26,14 @@ body{
     color: #23282c;
 
 }
+
+.table {
+    background-color: $gray-800 !important;
+}
+
+.card {
+    background-color: transparent;
+}
+.table-striped tbody tr:nth-of-type(2n+1){
+    background-color: rgba(0, 0, 0, 0.2)
+}

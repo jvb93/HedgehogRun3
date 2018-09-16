@@ -2,50 +2,46 @@
  <div class="row">
      <div class="col-md-6">
         <h1>Top Ten Longest Nights</h1>
-         <div class="card">
-            <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>
-                                Night Beginning
-                            </th>
-                            <th>
-                                Total Miles
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let record of topTenLongestNights | async">
-                            <td>{{record.StartDate | date:false}}</td>
-                            <td>{{record.TotalTicks | miles | round:2 }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-         </div>
+        <table class="table table-striped table-borderless">
+            <thead>
+                <tr>
+                    <th>
+                        Night Beginning
+                    </th>
+                    <th>
+                        Total Miles
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let record of topTenLongestNights | async">
+                    <td>{{record.StartDate | date:false}}</td>
+                    <td>{{record.TotalTicks | miles | round:2 }}</td>
+                </tr>
+            </tbody>
+        </table>
         
      </div>
      <div class="col-md-6">
          <h1>Top Ten Fastest Intervals</h1>
-            <div class="card">
-                    <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Interval
-                                    </th>
-                                    <th>
-                                        MPH
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let record of topTenFastestIntervals | async">
-                                    <td>{{record.FastestInterval | date:true}}</td>
-                                    <td>{{record.MaxTicks | mph | round:2  }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                 </div>
+         <table class="table table-striped table-borderless">
+            <thead>
+                <tr>
+                    <th>
+                        Interval
+                    </th>
+                    <th>
+                        MPH
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let record of topTenFastestIntervals | async">
+                    <td>{{record.FastestInterval | date:true}}</td>
+                    <td>{{record.MaxTicks | mph | round:2  }}</td>
+                </tr>
+            </tbody>
+        </table>
      </div>
  </div>
 </div>
