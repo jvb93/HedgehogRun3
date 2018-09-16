@@ -1,31 +1,13 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
-  "version": "2.0.0-rc.2",
-  "description": "CoreUI Free Angular 2+ Admin Template",
-  "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
-  },
-  "contributors": [
-    {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
-    }
-  ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2018 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "server.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node server.js",
+    "build": "ng build --prod"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.9",
     "@angular/common": "^6.0.9",
@@ -44,9 +26,11 @@
     "@firebase/firestore": "^0.6.1",
     "angular-svg-round-progressbar": "^2.0.0",
     "angularfire2": "^5.0.0-rc.11",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.1.2",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.7",
+    "express": "^4.16.3",
     "firebase": "^5.3.1",
     "flag-icon-css": "^3.0.0",
     "font-awesome": "^4.7.0",
